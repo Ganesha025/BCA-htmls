@@ -10,3 +10,7 @@
 
 **6. Indha simple Programs vachi neenga useful ah ethaachum project pannikonga**
 
+
+
+
+exercise 2 . https://ganesha025.github.io/BCA-htmls/biodata.html
