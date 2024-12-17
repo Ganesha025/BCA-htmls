@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of BCA - Kongunadu Arts and Science College</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGnlELimZcWWXDsPH64BwWM1HQY7tXXzkOQ&s">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url('https://img.freepik.com/free-vector/3d-style-black-background-with-paper-layer_206725-669.jpg?semt=ais_hybrid') no-repeat center center;
+            background-size: cover;
+            backdrop-filter: blur(7px);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 2vw; /* Use vw for font-size to be responsive */
+            scroll-behavior: smooth;
+            font-family: "Algerian", serif;        }
+
+        header {
+            background-color: transparent;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 2vh 0; /* Use vh for padding */
+        }
+
+        .navbar {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3vw; /* Use vw for font-size */
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap; /* Wrap items in small screens */
+        }
+
+        nav ul li {
+            margin-left: 3vw; /* Use vw for margins */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 2vw; /* Use vw for font-size */
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('https://www.example.com/hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        .hero-text h2 {
+            font-size: 5vw; /* Use vw for font-size */
+            margin-bottom: 1vh; /* Use vh for margin */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hero-text p {
+            font-size: 2.5vw; /* Use vw for font-size */
+            font-weight: 300;
+        }
+
+        .about, .services, .contact {
+            padding: 8vh 2vw; /* Use vh and vw for padding */
+            text-align: center;
+            background-color: white;color: black;
+        }
+
+        .about h2, .services h2, .contact h2 {
+            font-size: 4vw; /* Use vw for font-size */
+            margin-bottom: 3vh; /* Use vh for margin */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .about p, .contact p {
+            font-size: 2vw; /* Use vw for font-size */
+            max-width: 80vw; /* Use vw for max-width */
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .services {
+            background-color: #0e1017;
+            color: white;
+        }
+
+        .services ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Use auto-fit and minmax for responsive columns */
+            gap: 2vw; /* Use vw for gap */
+            margin: 0 auto;
+            max-width: 80vw; /* Use vw for max-width */
+        }
+
+        .services ul li {
+            background-color: #fff;
+            color: black;
+            padding: 2vw; /* Use vw for padding */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 2vw; /* Use vw for font-size */
+            transition: transform 0.3s ease;
+        }
+
+        .services ul li:hover {
+            transform: translateY(-1vh); /* Use vh for transform */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2vh 0; /* Use vh for padding */
+            text-align: center;
+        }
+
+        .fadeIn {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        #scrollToTop {
+            position: fixed;
+            bottom: 2vh; /* Use vh for position */
+            right: 2vw; /* Use vw for position */
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 5vw; /* Use vw for width */
+            height: 5vh; /* Use vh for height */
+            font-size: 2vw; /* Use vw for font-size */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* For WebKit Browsers */
+        ::-webkit-scrollbar {
+            width: 1vw; /* Use vw for width */
+            height: 1vw; /* Use vw for height */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #0e1017;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* For Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #0e1017 transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar fadeIn">
+            <div class="logo">
+                <h2>Kongunadu Arts & Science College</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero fadeIn">
+        <div class="hero-text">
+            <h2>Department of BCA</h2>
+            <p>We make your Dream Success</p>
+        </div>
+    </section>
+
+    <section id="about" class="about fadeIn">
+        <h2>About Us</h2>
+        <p>The Department of BCA at Kongunadu Arts and Science College offers innovative programs designed to prepare students for careers in computer Applications and information technology. We foster an environment of excellence in research and learning, ensuring students are equipped with the skills needed for the digital world.</p>
+    </section>
+
+    <section id="services" class="services fadeIn">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Innovative Research Projects</li>
+            <li>Industrial Visit to other states</li>
+            <li>Internships & Job Placements</li>
+            <li>Social Initiatives & Development</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact fadeIn">
+        <h2>Contact Us</h2>
+        <p>Email: ganeshdeveloper025@gmail.com</p>
+        <p>Phone: +91 123 456 7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; Ganesh BCA, Kongunadu Arts and Science College <br>| All Rights Reserved |</p>
+    </footer>
+
+    <button id="scrollToTop">↑</button>
+</body>
+</html>

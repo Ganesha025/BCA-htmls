@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Components</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGnlELimZcWWXDsPH64BwWM1HQY7tXXzkOQ&s">
+    <style>
+        /* Style for the image */
+        #myImage {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            transition: transform 0.5s ease;
+        }
+        #myImage:hover {
+            transform: scale(1.1);
+        }/* Styling for the container with scroll bar */.scroll-container {
+            width: 100%;
+            height: 150px;
+            overflow-y: scroll;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+            padding: 10px;
+        }/* Animation for the text */ @keyframes slide {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }.animated-text {
+            font-size: 24px;
+            animation: slide 2s ease-out;
+        }body{
+            overflow-x: hidden;padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Web Page</h1>
+    <img id="myImage" src="https://cdn.pixabay.com/photo/2024/03/05/19/42/ai-generated-8615202_640.jpg" 
+    alt="Placeholder Image">
+    <br>
+    <a href="https://www.example.com" target="_blank">Click</a>
+
+    <!-- Scroll Bar Component -->
+    <div class="scroll-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum lacus at sapien gravida, id faucibus erat condimentum. Nulla facilisi. Donec interdum nisi sit amet orci fermentum, eu tincidunt nulla hendrerit.</p>
+        <p>Nulla auctor tortor sit amet erat sollicitudin, nec sollicitudin justo volutpat. Curabitur auctor metus non nulla dignissim, eget feugiat eros tincidunt. Aenean eget metus vitae turpis convallis egestas vel id enim.</p>
+        <p>Vestibulum ac mi vitae magna lacinia vulputate. Cras euismod sollicitudin ligula ac luctus. Nam a malesuada urna. Duis auctor vestibulum augue et condimentum. Integer vitae nulla sed lectus cursus dictum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minus cum quasi delectus itaque excepturi officia, reiciendis sit illum nulla, obcaecati quos adipisci blanditiis, consequuntur minima incidunt expedita. Aspernatur nulla ipsam blanditiis. Veniam excepturi cupiditate, quo adipisci non iste ea voluptatibus sed odio exercitationem quasi architecto fuga ad sit saepe debitis. Laborum voluptatum, officia esse rerum, nesciunt quo a incidunt est molestiae perferendis veniam nostrum iure animi doloribus vitae quisquam, eveniet nulla corporis reiciendis quasi dolores dolorum. Cumque blanditiis est laboriosam officiis! Libero nesciunt possimus ea, quaerat dolorum adipisci repellat placeat quod iure similique quidem quasi ipsam nostrum odit explicabo.</p>
+    </div>
+
+    <!-- Animation Component -->
+    <div class="animated-text">This text slides into view using animation!</div>
+
+</body>
+</html>
