@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Student Mark List</title>
+    <style>
+        body { background-color: #1e1e1e; color: #f4f4f9; }
+        .container { padding: 20px; background-color: #333; }
+        h1 { text-align: center; color: #4CAF50; }
+        table { width: 100%; border-collapse: collapse;background-color: #222;  }
+        th, td { padding: 10px; border: 1px solid #444; text-align: center; }
+        th { background-color: #4CAF50; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Mark List</h1>
+        <table id="markListTable">
+            <thead>
+                <tr><th>Name</th><th>Subject</th><th>Marks</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        const studentsData = [
+            { name: "John", subject: "Math", marks: 85 },
+            { name: "Jane", subject: "Science", marks: 92 },
+            { name: "Mark", subject: "History", marks: 78 },
+            { name: "Emma", subject: "English", marks: 88 }
+        ];
+        const tableBody = document.querySelector("#markListTable tbody");
+        for (let i = 0; i < studentsData.length; i++) {
+            const student = studentsData[i];
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${student.name}</td><td>${student.subject}</td><td>${student.marks}</td>`;
+            tableBody.appendChild(row);
+        }
+    </script>
+</body>
+</html>
