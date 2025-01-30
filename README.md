@@ -16,7 +16,7 @@ exercise 8. https://ganesha025.github.io/BCA-htmls/8.%20Payroll/index.html
 
 **SPIRAL**
 
-program 1 : https://ganesha025.github.io/BCA-htmls/Spiral/program2/index.html
+program 1 : https://ganesha025.github.io/BCA-htmls/Spiral/program1/index.html
 
 program 2 : https://ganesha025.github.io/BCA-htmls/Spiral/program2/index.html
 
