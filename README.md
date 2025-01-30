@@ -1,8 +1,8 @@
 **EXERCISE :**
 
-exercise 1. https://ganesha025.github.io/BCA-htmls/1.%20site%20for%20department/index.html
+exercise 1. https://ganesha025.github.io/BCA-htmls/Spiral/program1/index.html
 
-exercise 2. https://ganesha025.github.io/BCA-htmls/biodata.html
+exercise 2. https://ganesha025.github.io/BCA-htmls/Spiral/program2/index.html
 
 exercise 3. https://ganesha025.github.io/BCA-htmls/3.%20formatting%20tags/index.html
 
