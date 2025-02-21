@@ -1,208 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biodata</title>
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGnlELimZcWWXDsPH64BwWM1HQY7tXXzkOQ&s">
     <style>
-        /* Global Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Algerian' serif;
-            background-color: #121212;
-            color: #E0E0E0;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #1E1E1E;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Profile Section */
-        .profile {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 5px solid #03A9F4;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(3, 169, 244, 0.7);
-        }
-
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    body {font-family: 'Algerian' serif;background-color: #121212;color: #E0E0E0;line-height: 1.6;}
+    .container {max-width: 900px; margin: 40px auto; padding: 30px; background-color: #1E1E1E; border-radius: 15px;}
+    .profile {text-align: center;margin-bottom: 40px;}
+    .profile-img {width: 150px;height: 150px;border-radius: 50%;margin-bottom: 20px;border: 5px solid #03A9F4;transition: transform 0.3s ease, box-shadow 0.3s ease;}
         .name {
             font-size: 2.8rem;
             font-weight: bold;
             color: #03A9F4;
             margin-bottom: 10px;
-        }
-
-        .role {
+        }.role {
             font-size: 1.5rem;
             color: #B0BEC5;
             margin-bottom: 20px;
-        }
-
-        /* Personal Details */
-        .bio {
+        }.bio {
             margin-bottom: 40px;
-        }
-
-        .bio h2 {
+        }.bio h2 {
             font-size: 1.8rem;
             margin-bottom: 10px;
             color: #FF5722;
             text-transform: uppercase;
-        }
-
-        .bio p {
+        }.bio p {
             font-size: 1.2rem;
             margin: 5px 0;
         }.skills {
             margin-bottom: 40px;
-        }
-
-        .skills h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #FF5722;
-            text-transform: uppercase;
-        }
-
-        .skills ul {
-            list-style: none;
-        }
-
-        .skills li {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            background-color: #333;
-            padding: 12px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .skills li:hover {
-            background-color: #03A9F4;
-            color: #fff;
-        }
-
-        /* Footer Section */
-        .footer {
-            text-align: center;
-            font-size: 1rem;
-            color: #B0BEC5;
-            margin-top: 40px;
-        }
-
-        .footer p {
-            margin-top: 10px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }.skills li{text-align: center;}
-
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .name {
-                font-size: 2rem;
-            }
-
-            .role {
-                font-size: 1.2rem;
-            }
-
-            .bio h2, .skills h2 {
-                font-size: 1.4rem;
-            }
-
-            .skills li {
-                font-size: 1rem;
-                padding: 10px;
-            }
-        }.bio ul li{
-            list-style:inside;
-        }.bio strong{
-            color: tomato;
-        }
+        }.skills h2 {font-size: 1.8rem;margin-bottom: 15px;color: #FF5722;text-transform: uppercase;
+        }.skills ul {list-style: none;}
+        .skills li {font-size: 1.2rem;margin-bottom: 10px;background-color: #333;padding: 12px;border-radius: 8px;transition: background-color 0.3s ease;
+        }.skills li:hover {
+background-color: #03A9F4;
+color: #fff;
+        }.footer {text-align: center;font-size: 1rem;color: #B0BEC5;margin-top: 40px;
+        }.footer p{margin-top: 10px;}
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Profile Section -->
-        <div class="profile">
-            <img src="data:image/jpeg;base64,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" 
-            alt="Profile Picture" class="profile-img">
-            <h1 class="name">Savage King</h1>
-            <p class="role">Developer</p>
-        </div>
-
-        <!-- Personal Details -->
-      <!-- Personal Details -->
+<div class="container">
+<div class="profile">
+<img src="data:image/jpeg;base64,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" alt="Profile Picture" class="profile-img">
+<h1 class="name">Savage King</h1>
+<p class="role">Developer</p>
+</div>
 <div class="bio">
     <h2>Personal Details</h2>
-    <p><strong>Name: </strong>Ganesh</p>
-    <p><strong>Age:</strong>20</p>
-    <p><strong>Location:</strong>Nellai, TN</p>
-    <p><strong>Email:</strong> ganeshdeveloper025@gmail.com</p>
-    <p><strong>Phone:</strong> +123 456 7890</p>
-    <p><strong>Education:</strong> Bachelor of Computer Applications (BCA)</p>
-    <p><strong>Hobbies:</strong> Coding, Reading Tech Blogs, Playing Mobile Games</p>
-    <p><strong>Languages:</strong> Tamil ,English</p>
-    <p><strong>Achievements:</strong>I developed Many complicated Websites </p>
+    <p><strong>Name : </strong>Ganesh</p>
+    <p><strong>Age : </strong>20</p>
+    <p><strong>Location : </strong>Nellai, TN</p>
+    <p><strong>Email : </strong> ganeshdeveloper025@gmail.com</p>
+    <p><strong>Phone : </strong> +123 456 7890</p>
+    <p><strong>Education : </strong> Bachelor of Computer Applications (BCA)</p>
+    <p><strong>Hobbies : </strong> Coding, Reading Tech Blogs, Playing Mobile Games</p>
+    <p><strong>Languages : </strong> Tamil ,English</p>
+    <p><strong>Achievements : </strong>I developed Many complicated Websites </p>
     <ul>
         <li>Developed a multi-user inventory management system for a local business.</li>
         <li>Won first place in a college-level hackathon.</li>
         <li>Contributed to an open-source projects.</li>
     </ul>
-    <p><strong>Career Objectives:</strong></p>
-    <p>
-        To work as a full-stack developer in a dynamic environment where I can utilize my skills in 
-        web and app development to contribute to the growth of the organization while enhancing my 
-        knowledge in the field.
+    <p><strong>Career Objectives : </strong></p>
+    <p>To work as a full-stack developer in a dynamic environment where I can utilize my skills in  web and app development to contribute to the growth of the organization while enhancing my knowledge in the field.
     </p>
-    <p><strong>Certifications:</strong></p>
+    <p><strong>Certifications : </strong></p>
     <ul>
         <li>JavaScript Advanced Course – Google devops</li>
         <li>Google Data Analytics Professional Certificate</li>
     </ul>
-    <p><strong>Volunteer Experience:</strong></p>
+    <p><strong>Volunteer Experience : </strong></p>
     <ul>
         <li>Team Leader of Tech Hat (Hackathon)</li>
-        <li>Assistant develper of Tech Hub</li>
+        <li>Assistant developer of Tech Hub</li>
     </ul>
-    <p><strong>Interests:</strong></p>
-    <p>Exploring new technologies, solving complex algorithms, creating interactive user interfaces, and contributing to open-source projects.</p>
-</div>
-
-
-        <!-- Skills Section -->
-        <div class="skills">
+   </div>
+<div class="skills">
             <h2>Skills</h2>
             <ul>
                 <li>HTML, CSS</li>
@@ -211,14 +85,11 @@
                 <li>React Native</li>
                 <li>Three JS</li>
                 <li>SQL</li>
-                <li> MongoDB</li>
-                
+                <li> MongoDB</li>         
             </ul>
         </div>
-
-        <!-- Footer Section -->
         <div class="footer">
-            <p>Contact me: ganeshdeveloper025@gmail.com</p>
+            <p>Contact me:ganeshdeveloper025@gmail.com</p>
         </div>
     </div>
 </body>
