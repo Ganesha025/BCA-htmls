@@ -21,14 +21,8 @@
     </section>
     <script>
         function validateForm() {
-            if (document.getElementById("username").value && document.getElementById("password").value) {
-                window.location.href = "index.html";
-                return false;
-            } else {
-                alert("Please fill in both fields.");
-                return false;
-            }
-        }
+    return (document.getElementById("username").value && document.getElementById("password").value) ? (window.location.href = "index.html", false) : (alert("Please fill in both fields."), false);
+}
     </script>
 </body>
 </html>
