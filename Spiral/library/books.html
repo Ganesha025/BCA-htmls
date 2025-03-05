@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+    <style>body{background:url('https://www.elibrarysoftware.com/img/blog/2.jpg')no-repeat center/cover;color: white;}</style>
+</head>
+<body>
+    <h1>Available Books</h1>
+    <input id="newBook" placeholder="Add a book">
+    <button onclick="addBook()">Add</button>
+    <ul id="book-list"></ul>
+    <script>
+        let books = JSON.parse(localStorage.getItem("books")) || ["Encyclopedia", "Wings Of Fire"],
+            list = document.getElementById("book-list");
+        function render() {
+            list.innerHTML = books.map((b, i) => `<li>${b} <button onclick="books.splice(${i},1),render()">Remove</button></li>`).join(""),
+            localStorage.setItem("books", JSON.stringify(books));
+        }function addBook() {
+            let book = document.getElementById("newBook").value;
+            book && (books.push(book), render(), document.getElementById("newBook").value = "");
+        }
+        render();
+    </script>
+</body>
+</html>
