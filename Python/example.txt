@@ -1,0 +1,2 @@
+Hello, this is a file I/O example.
+Writing multiple lines to a file.
