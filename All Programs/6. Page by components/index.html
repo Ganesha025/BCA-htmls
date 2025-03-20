@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>ANIMATIONS</title>
+<style>
+body {
+    background-color: Lavender;
+    font-family: Arial, Helvetica, sans-serif;
+}@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.font {
+    position: relative;
+    top: -80%;
+    padding: 70px 20px;
+    color: white;
+    font-size: 12px;
+    text-align: justify;
+    animation: fadeIn 2s ease-in-out;
+}.par {
+    position: relative;
+    top: -40%;
+    padding: 70px 20px;
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+    animation: slideIn 1.5s ease-in-out;
+}.imgs {
+    position: absolute;
+    bottom: -70px;
+    left: 60%;
+    animation: bounce 2s infinite;
+}.scroll {
+    color: black;
+    text-align: justify;
+    position: relative;
+    bottom: -140px;
+    overflow-y: auto;
+    width: 800px;
+    max-height: 200px;
+    background-color: lightblue;
+    animation: fadeIn 3s ease-in-out;
+}</style>
+</head>
+<body>
+<img src="https://windowscustomization.com/wp-content/uploads/2019/01/Spaceman.gif" width="100%" height="100%">
+<div class="font">
+    <center>
+        <br><br>
+        <h1>A S T R O N O M Y</h1>
+    </center>
+</div>
+<div class="par">
+    <p>Astronomy is a natural science that studies celestial objects, phenomena, and processes
+        outside of the Earth's atmosphere. It uses various branches of physics and mathematics to
+        explain the origin and evolution of these celestial bodies and events. Astronomers study objects
+        such as planets, moons, stars, galaxies, comets, and phenomena including supernovae, quasars,
+        and cosmic microwave background radiation. The field is divided into observational and
+        theoretical branches, with observational astronomy focused on acquiring data from
+        observations, and theoretical astronomy concerned with developing models and simulations to
+        describe astronomical objects and phenomena. Amateur astronomers play an active role in the
+        field, particularly in the discovery and observation of transient events. The term "astronomy"
+        comes from the Greek words for "star" and "law" or "culture," reflecting the ancient roots of the
+        science.</p>
+    <div class="imgs">
+        <a href="https://www.isro.gov.in/"><img src="https://cdn.pixabay.com/animation/2022/11/13/07/16/07-16-41-513_512.gif"></a>
+    </div>
+    <p class="scroll">Earth is the third planet from the Sun and the only astronomical object
+        known to harbor life. It is the largest and most massive of the four rocky planets in the Solar
+        System, with a diameter of about 12,742 kilometers. Earth is composed of iron, oxygen, silicon,
+        magnesium, sulfur, nickel, calcium, and aluminum. The majority of Earth's surface is covered
+        in water, with the oceans holding about 96.5% of the planet's water. The remaining 3.5% is
+        freshwater, with most of it being locked up in ice caps and glaciers. Earth has a liquid outer
+        core that generates a magnetic field capable of deflecting most of the destructive solar winds
+        and cosmic radiation. The planet's atmosphere is composed primarily of nitrogen and oxygen,
+        with water vapor, carbon dioxide, and other gases making up the remainder. Earth has one
+        natural satellite, the Moon, which orbits the planet at a distance of about 384,400 kilometers.
+        The planet takes about 365.25 days to complete one orbit around the Sun, and rotates around its
+        own axis in approximately 23 hours, 56 minutes.</p>
+</div>
+</body>
+</html>

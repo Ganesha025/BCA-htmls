@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Payroll Details</title>
+<style>
+body { background-color: #F0FFF0; text-align: center; }
+</style>
+<script>
+function calculate() {
+    let basicPay = parseFloat(document.getElementById('basicPay').value) || 0;
+    let loan = parseFloat(document.getElementById('loan').value) || 0;
+    let da = basicPay * 0.05;
+    let hra = basicPay * 0.1;
+    let ma = basicPay * 0.02;
+    let pf = basicPay * 0.03;
+    let bonus = basicPay * 0.15;
+    let netPay = (basicPay + da + ma) - (loan + pf);
+    let fields = ['da', 'hra', 'ma', 'pf', 'bonus', 'netPay'];
+    for (let i = 0; i < fields.length; i++) {
+        document.getElementById(fields[i]).value = eval(fields[i]).toFixed(2);
+    }
+}function reset() { document.querySelectorAll('input').forEach(i => i.value = ""); }
+</script>
+</head>
+<body>
+    <h1>PAYROLL DETAILS</h1>
+    <div class="txt">
+        <h3>PERSONAL DETAILS</h3>
+        <label>EMPLOYEE NO :</label> <input type="text" id="en"><br>
+        <label>NAME :</label> <input type="text" id="name"><br>
+        <label>BASIC PAY :</label> <input type="number" id="basicPay"><br>
+        <label>LOAN :</label> <input type="number" id="loan"><br><br>
+        <button onclick="calculate()">CALCULATE</button>
+        <button onclick="reset()">RESET</button><br><br>
+        <label>DA :</label> <input type="text" id="da" readonly><br>
+        <label>HRA :</label> <input type="text" id="hra" readonly><br>
+        <label>MA :</label> <input type="text" id="ma" readonly><br>
+        <label>PF :</label> <input type="text" id="pf" readonly><br>
+        <label>BONUS :</label> <input type="text" id="bonus" readonly><br><br>
+        <h3>NET PAY</h3>
+        <label>NET PAY :</label> <input type="text" id="netPay" readonly>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Biodata</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGnlELimZcWWXDsPH64BwWM1HQY7tXXzkOQ&s">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #FFFFFF; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 40px auto; padding: 30px; background-color: #F8F9FA; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);border: 1px solid black; }
+        .profile { text-align: center; margin-bottom: 40px; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; border: 5px solid #007BFF; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .name { font-size: 2.5rem; font-weight: bold; color: #007BFF; margin-bottom: 10px; }
+        .role { font-size: 1.4rem; color: #555; margin-bottom: 20px; }
+        .bio h2, .skills h2 { font-size: 1.8rem; margin-bottom: 15px; color: #007BFF; text-transform: uppercase; }
+        .bio p, .skills li { font-size: 1.2rem; margin: 5px 0; }
+        .skills ul { list-style: none; padding: 0; }
+        .skills li { font-size: 1.2rem; margin-bottom: 10px; background-color: #E9ECEF; padding: 12px; border-radius: 8px; transition: background-color 0.3s ease; }
+        .skills li:hover { background-color: #007BFF; color: white; }
+        .footer { text-align: center; font-size: 1rem; color: #777; margin-top: 40px; }
+        .footer p { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="data:image/png;base64,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" alt="Profile Picture" class="profile-img">
+            <h1 class="name">Abinandhu</h1>
+            <p class="role"> Web Developer</p>
+        </div>
+        <div class="bio">
+            <h2>Personal Details</h2>
+            <p><strong>Name:</strong>Abinandhu</p>
+            <p><strong>Age:</strong> 21</p>
+            <p><strong>Location:</strong> CBE, TN</p>
+            <p><strong>Email:</strong> abinandhudeveloper032@gmail.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Education:</strong> Bachelor of Computer Applications (BCA)</p>
+            <p><strong>Hobbies:</strong> Coding, Reading Tech Blogs, Playing Mobile Games</p>
+            <p><strong>Languages:</strong> Tamil, English</p>
+            <p><strong>Achievements:</strong> I developed many complicated websites</p>
+            <ul>
+                <li>Developed a multi-user inventory management system for a local business.</li>
+                <li>Won first place in a college-level hackathon.</li>
+                <li>Contributed to open-source projects.</li>
+            </ul>
+            <p><strong>Career Objectives:</strong></p>
+            <p>To work as a full-stack developer in a dynamic environment where I can utilize my skills in web and app development to contribute to the growth of the organization while enhancing my knowledge in the field.</p>
+            <p><strong>Certifications:</strong></p>
+            <ul>
+                <li>JavaScript Advanced Course – Google DevOps</li>
+                <li>Google Data Analytics Professional Certificate</li>
+            </ul>
+            <p><strong>Volunteer Experience:</strong></p>
+            <ul>
+                <li>Team Leader of Tech Hat (Hackathon)</li>
+                <li>Assistant Developer of Tech Hub</li>
+            </ul>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Abinandhu | All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
